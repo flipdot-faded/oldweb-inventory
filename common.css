@@ -1,0 +1,843 @@
+/* common.css                       */
+/*   styles for the flipdot archive */
+/*     colors                       */
+/*       white:  #FFFFFF            */
+/*       black:  #000000            */
+/*       yellow: #F6C600            */
+/*       orange: FUGLY. DONT USE    */
+
+/* FONTS */
+@font-face {
+    font-family: "OpenSans";
+    src: url("fnt/OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url("fnt/OpenSans-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "OpenSansSemi";
+    src: url("fnt/OpenSans-Semibold.ttf");
+}
+@font-face {
+    font-family: "OpenSansItalic";
+    src: url("fnt/OpenSans-Italic.ttf");
+    /*font-style: italic, oblique;*/
+}
+/*@font-face {
+    font-family: "OpenSans";
+    src: url("fnt/OpenSans-SemiboldItalic.ttf");
+    font-weight: bold;
+    font-style: italic, oblique;
+}*/
+
+/* LAYOUT */
+* {
+	margin: 0;
+	padding: 0;
+	color: #000000;
+	font-family: OpenSans;
+	font-size: 100%;
+	border: none;
+	background: white;
+}
+
+#login {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -240px; /* half elements width*/
+	margin-top: -110px; /* half elements height*/
+	width: 480px;
+	height: 220px;
+}
+
+html,
+#menubar {
+	min-width: 960px;
+}
+
+#menubar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+/* main menu */
+#menubar ul {
+	list-style: none;
+	font-size: 21px;
+}
+
+#menubar ul li {
+	height: 28px;
+	float: left;
+	padding: 5px 20px 10px;
+	background-color: #F6C600;
+}
+
+#menubar ul li.selected {
+	background-color: #F6C600;
+	color: #000000;
+}
+
+/* sub menu */
+#menubar ul ul {
+	list-style: none;
+}
+
+#menubar ul ul li,
+#menubar ul ul li.selected {
+	color: #F6C600;
+	background-color: #000000;
+}
+
+#menubar ul ul li {
+	height: 28px;
+	float: left;
+	padding: 5px 20px 10px;
+}
+
+#menubar ul ul li.selected {
+}
+
+/* links */
+#menubar ul li.selected,
+#menubar ul a:hover li {
+	border-bottom: 12px solid #000000;
+}
+
+#menubar ul ul li.selected,
+#menubar ul ul a:hover li {
+	border-bottom: 12px solid #F6C600;
+}
+
+/* lists */
+ol.help {
+	margin: -12px 64px 30px;
+}
+ol.help li {
+	color: silver;
+	font-family: OpenSansSemi;
+}
+ol.help li span {
+	/*color: black;*/
+}
+ol.help li span i {
+	color: #5B5B5B;
+}
+/* content: text */
+#content .textwrap {
+	width: 960px;
+}
+#content .textwrap a {
+	color: #000000;
+	background-color: #F6C600;
+	text-decoration: none;
+	padding: 2px 6px;
+}
+#content .textwrap a:hover {
+	color: #F6C600;
+	background-color: #000000;
+}
+
+h2 {
+	font-family: OpenSansSemi;
+	font-weight: normal;
+	border-bottom: 6px solid #F6C600;
+	margin-top: 6px;
+	margin-bottom: 12px;
+	font-size: 21px;
+}
+
+h3 {
+	font-family: OpenSansItalic;
+	font-weight: normal;
+	margin-top: 6px;
+	margin-bottom: 12px;
+	font-size: 96px;
+	width: auto;
+	border: 18px solid #F6C600;
+	padding: 0 40px;
+	float: left;
+	/*overflow: hidden;
+	border-bottom: 18px solid #F6C600;*/
+}
+
+#content .textwrap p {
+	margin-bottom: 30px;
+}
+
+#content .textwrap .columnwrap {
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	column-count: 2;
+	-moz-column-gap: 48px;
+	-webkit-column-gap: 48px;
+	column-gap: 48px;
+}
+
+#content .textwrap .checklist {
+	margin-top: 24px;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    display: none;
+}
+
+p.itemcount {
+	float: right;
+	color: silver;
+	font-size: 18px;
+}
+
+p.delete,
+form input[type="submit"] {
+	font-family: OpenSansSemi;
+	background-color: #FFFFFF;
+	border-bottom: 6px solid #F6C600;
+    clear: both;
+    font-size: 21px;
+}
+
+form input[type="submit"] {
+    float: right!important;
+}
+
+p.delete:hover,
+form input[type="submit"]:hover {
+	border-bottom: 6px solid #000000;
+}
+
+p.delete {
+    float: left!important;
+    clear: both;
+	margin-bottom: 24px;
+	margin-left: 12px;
+	padding: 4px 16px;
+}
+
+div#deletebox {
+    font-size: 21px;
+    float: left!important;
+    clear: both;
+	padding: 4px 16px;
+	border: 4px solid #000000;
+	
+	display: none;
+	margin-bottom: 24px;
+	margin-left: 24px;
+	width: 424px;
+	font-family: OpenSansSemi;
+}
+
+div#deletebox a {
+	font-family: OpenSans!important;
+	float: right;
+	text-decoration: none;
+}
+
+input#deleteButton {
+	text-decoration: none;
+	border: none;
+	padding: 0!important;
+	margin: 0!important;
+}
+
+
+#content div.form label.formcheckbox {
+	float: right !important;
+	margin: 0 20px 8px 0;
+	text-align: left;
+	width: auto;
+	border-bottom: 6px solid #FFFFFF;
+	background-color: #F6C600;
+}
+
+#content div.form input[type="checkbox"]:checked + label.formcheckbox {
+	border-bottom: 6px solid #000000;
+}
+
+#content div.form .formcheckbox,
+div.fakefile input,
+form input[type="submit"],
+form label {
+    display: block;
+	font-size: 21px;
+	padding: 4px 16px;
+	color: #000000;
+	float: left;
+}
+
+/*#content div.form p,*/
+#login p {
+	padding: 12px 24px 24px;
+	text-align: center;
+}
+
+#content div.form form label {
+    margin-bottom: 24px;
+    width: 142px;
+}
+
+#content div.form form li.hint {
+	float: left;
+}
+
+#content div.form form li p.hint {
+    color: silver;
+    font-size: 16px;
+    margin: -8px 0 16px 180px;
+    text-align: left;
+    padding-right: 0;
+	font-family: OpenSansItalic;
+	clear: both;
+}
+
+#content div.form form label,
+#login form label {
+	margin-left: 0;
+	display: -moz-inline-box;
+	clear: both;
+	text-align: right;
+}
+
+#content div.form form input[type="text"],
+#content div.form form input[type="password"],
+#login form input[type="text"],
+#login form input[type="password"] {
+	width: 274px;
+}
+
+.fileinputs input.lendingdays {
+	margin: 12px 0 16px;
+	width: 120px!important;
+	float: left;
+}
+
+.fileinputs p.lendingdays {
+	float: left;
+	padding: 20px 24px;
+}
+
+#numberinput {
+	display: none;
+}
+
+li.multi {
+	clear: right;
+}
+
+li.multi input {
+	float: right !important;
+	margin-bottom: 12px !important;
+	margin-right: 20px !important;
+}
+
+li.multi input:nth-child(2),
+li.multi input.small {
+	width: 234px !important;
+	border-right: none;
+}
+
+li.multi label,
+li.multi a {
+	background-color: #F6C600 !important;
+	border-bottom: 6px solid #FFFFFF !important;
+	color: #000000 !important;
+	float: right !important;
+	font-family: OpenSansSemi;
+	margin: 0 20px 0 -20px !important;
+	padding: 8px 12px !important;
+	text-align: center !important;
+	text-decoration: none;
+	width: 20px !important;
+	height: 30px;
+}
+li.multi input[type="checkbox"]:checked + label {
+	color: #F6C600 !important;
+	background-color: #000000!important;
+}
+
+li.multi a.plus {
+	clear: both;
+	padding: 8px 12px;
+}
+
+li.multi a:hover {
+	color: #F6C600!important;
+	background-color: #000000!important
+}
+
+#content div.form form input[type="submit"],
+#login form input[type="submit"] {
+	margin-bottom: 24px;
+	margin-right: 12px;
+}
+
+#content div.form form span,
+#login form span {
+	display: block;
+	width: 60px;
+}
+
+#content div.form form span:after,
+#login form span:after {
+	content: ":";
+}
+
+#content div.form fieldset ol,
+#login fieldset ol {
+	padding: 12px 0;
+}
+
+#content div.form fieldset li,
+#login fieldset li {
+	list-style: none outside none;
+}
+
+#content div.form img.preview {
+	display: -moz-box!important;
+	display: block;
+	margin: 12px 0;
+	width: 306px;
+    border: 4px solid #F6C600;
+}
+
+/* infobox */
+div.infobox {
+	border: 4px solid #F6C600;
+	font-size: 21px;
+	margin-bottom: 24px;
+	padding: 8px 16px;
+	text-align: center;
+	width: 430px;
+}
+
+/* infobox */
+div.infobox_clear {
+	clear: both;
+	width: 0;
+	height: 0;
+}
+
+/* sexy fileupload */
+div.fileinputs {
+	margin: 0 0 64px 174px;
+	position: relative;
+}
+
+div.fakefile input {
+	padding: 4px 16px;
+	width: 234px;
+}
+
+div.fakefile {
+    border: 4px solid #F6C600;
+    width: 306px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+input.file {
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+}
+
+#content div.form fieldset.multiline {
+    display: inline-block !important;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    width: 432px;
+	padding-bottom: 12px;
+}
+
+#content div.form fieldset.multiline legend {
+	font-family: OpenSans!important;
+}
+
+#content div.form fieldset.multiline textarea {
+	width: 100%;
+	resize: none;
+	outline: none;
+	overflow: auto;
+}
+
+#content div.form form .select {
+    /*background: url("img/arrow_down.png") no-repeat right center;*/
+	background: url("img/btn_expand.png") no-repeat scroll 266px 0 transparent;
+    border: 4px solid #F6C600;
+    float: left;
+    height: 42px;
+    /*margin-bottom: 16px;*/
+    margin-top: -4px;
+    overflow: hidden;
+    width: 306px;
+}
+
+/* not so sexy looking
+#content div.form form .select:hover {
+	background-position: 266px -42px;
+}
+*/
+
+#content div.form form .select select {
+    background: transparent;
+    font-size: 21px;
+    height: 40px;
+    line-height: 1;
+    padding: 4px 16px;
+    width: 340px;
+}
+
+#content div.form form input[type="file"] {
+	width: 280px;
+	border-bottom: 6px solid #F6C600;
+    float: left;
+    font-size: 21px;
+    margin: 0 12px 6px 0;
+    padding: 4px 16px;
+}
+
+#content div.form fieldset,
+#login fieldset {
+	border: 4px solid #F6C600;
+	padding: 0 12px;
+	font-size: 21px;
+}
+
+#content div.form fieldset legend,
+#login fieldset legend {
+	font-family: OpenSansSemi;
+	padding: 0 12px;
+}
+
+form label {
+	margin-left: 164px;
+}
+
+/*form.tags label { */
+div.checklist label {
+	border-bottom: 6px solid #FFFFFF;
+	background-color: #F6C600;
+	float :left;
+	margin: 0 12px 6px 0!important;
+	clear: none!important;
+	text-align: left!important;
+	width: auto!important;
+}
+
+form input[type="radio"]:checked + label,
+form input[type="checkbox"]:checked + label {
+	border-bottom: 6px solid #000000;
+	/*color: #F6C600;
+	background-color: #000000;*/
+}
+
+form input[type="password"],
+form input[type="text"] {
+	font-size: 21px;
+	border: 4px solid #F6C600;
+	margin: 0 12px 6px 0;
+	padding: 4px 16px;
+    float: left;
+}
+/* input form */
+/*#content form input[type="submit"]:hover {
+	border-bottom: 6px solid #000000;
+}*/
+
+/* content: inventory */
+#content div.form {
+	width: 540px
+}
+#content {
+	padding: 80px 40px;
+	background-color: #FFFFFF;
+}
+
+#content .item {
+	display: inline-block;
+	vertical-align: top;
+	width: 240px;
+	border: 4px solid #F6C600;
+	font-size: 14px;
+	margin: 0 12px 24px 0;
+}
+
+#content .item a:first-child {
+	text-decoration: none;
+}
+
+#content .item p:first-child {
+	font-size: 21px;
+	text-align: center;
+	background-color: #F6C600;
+}
+
+#content .item p.image {
+	border-bottom: 4px solid #F6C600;
+	float: left;
+	width: 240px;
+	height: 180px;
+	text-align: center;
+	background-color: #E7E7E7;
+}
+
+#content .item p.description,
+#content .item table {
+	text-align: left;
+	padding: 0 4px;
+}
+
+#content .item table {
+	width: 100%;
+	background-color: #FFFFFF;
+	float: left;
+}
+
+#content .item table td i {
+	color: grey;
+}
+
+#content .item table td a.url {
+	float: left;
+	margin: 0 6px 6px 0;
+}
+
+#content .item table td {
+	max-width: 150px;
+}
+/*#content .item table td:first-child:after {
+	content: ":";
+}*/
+
+/*
+#content .item a.qr {
+	margin: -8px -14px 0 0;
+	float: right;
+    background: url('img/qr.png') no-repeat 0 0;
+	width: 14px;
+	height: 14px;
+	overflow: hidden;
+	font-family: OpenSansSemi;
+	padding: 0;
+}
+
+#content .item a.qr:hover {
+    background: url('img/qr.png') no-repeat -14px 0;
+}
+*/
+
+#content .item a.qr:hover,
+#content .item a.edit:hover {
+	/*background-color: #F6C600;*/
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+#content .item:hover a.qr,
+#content .item:hover a.edit {
+	display: inline;
+}
+
+#content .item a.edit,
+#content .item a.qr {
+	text-decoration: none;
+	padding: 0 6px;
+	/*display: none;*/
+	border-top: 4px solid #000000;
+	color: #000000;
+	margin-bottom: -50px;
+}
+
+#content .item a.edit {
+	float: right;
+}
+
+#content .item a.qr {
+	float: left;
+}
+
+#content .item table td:first-child {
+	font-family: OpenSansSemi;
+	vertical-align: top;
+}
+
+
+#content .item table td span {
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 0 6px;
+}
+
+#content .item fieldset a,
+#content .item table td a {
+	color: #000000;
+	background-color: #F6C600;
+	text-decoration: none;
+	padding: 0 6px;
+}
+
+/*#content .item a.qr:hover,*/
+#content .item fieldset a:hover,
+#content .item table td a:hover {
+	color: #F6C600;
+	background-color: #000000;
+}
+
+#content .item table,
+#content .item p.description,
+#content .item fieldset {
+	padding: 6px 12px 8px;
+}
+
+#content .item p.description {
+	border-top: 4px solid #F6C600;
+	padding-top: 6px;
+	/*margin-bottom: 12px;*/
+	clear: both;
+}
+
+#content .item fieldset {
+	clear: both;
+	border-top: 4px solid #F6C600;
+	background: white;
+}
+
+#content .item fieldset legend {
+	font-family: OpenSansSemi;
+	padding: 0 6px;
+}
+
+#content .item fieldset a {
+	/*background: white;*/
+	margin: 0 6px 6px 0;
+	float: left;
+}
+
+/* content: pages */
+
+#content .pages {
+	padding-top: 24px;
+	clear: both;
+	font-size: 28px;
+	text-align: center;
+}
+
+#content .pages span,
+#content .pages a {
+	color: #000000;
+	background-color: #F6C600;
+	font-family: OpenSansSemi;
+	padding: 0 12px;
+	text-decoration: none;
+	margin-right: 6px;
+}
+
+#content .pages span,
+#content .pages a:hover {
+	color: #F6C600;
+	background-color: #000000;
+}
+
+/* IMAGES */
+
+/*#menulogo {
+	width: 131px;
+	height: 64px;
+	margin: 8px 12px;
+	background-image: url('img/logo_131x64.jpg');*/
+
+#logout {
+	background-color: white;
+	color: grey;
+	float: right;
+	height: 21px;
+	padding: 12px 12px;
+	border-bottom: 6px solid grey;
+}
+
+#logout_img {
+	background: url("img/btn_logout.png") repeat scroll 0 -10px transparent;
+	float: right;
+	height: 27px;
+	margin-left: -1px;
+	width: 32px;
+}
+
+#logout_img:hover {
+	background-position: -42px -11px; /* meh. fucked up the image */
+}
+
+#newidhint {
+	display: none;
+}
+
+#throbber {
+	display: none;
+	margin: 24px;
+}
+
+#throbber p {
+	padding-top: 12px;
+}
+
+#throbber,
+#throbber p,
+#throbberimg {
+	float: right;
+}
+
+#throbberimg {
+	background-image: url('img/throbber.gif');
+	width: 64px;
+	height: 64px;
+	margin-left: 12px;
+}
+
+.img_plus {
+	background: url("img/btn_plus.png") no-repeat scroll 0 0 transparent;
+}
+
+.img_plus:hover {
+	background-position: -42px 0;
+}
+
+.img_minus {
+	background: url("img/btn_minus.png") no-repeat scroll 0 0 transparent;
+}
+
+.img_minus:hover {
+	background-position: -42px 0;
+}
+
+.img_refresh {
+	background: url("img/btn_refresh.png") no-repeat scroll 0 0 transparent;
+}
+li.multi input[type="checkbox"]:checked + label.img_refresh {
+	background-position: -42px 0;
+}
+
+div.fakefile p {
+	background: url("img/btn_folder.png") no-repeat scroll 0 0 transparent;
+	float: right;
+	height: 42px;
+	width: 40px;
+}
+
+/* too buggy with the invisible input around
+div.fakefile p:hover {
+	background-position: -42px 0;
+}
+*/
