@@ -1,0 +1,16 @@
+RewriteEngine On 
+
+RewriteCond %{HTTPS} !=on
+RewriteCond %{ENV:HTTPS} !=on
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([^/.]+)/(.+)$ index.php?a=$1&b=$2 [L]
+RewriteRule ^([^/.]+)$ index.php?a=$1 [L]
+
+#RewriteRule ^([^/.]+)/([^/.]+)$ /inventar/index.php?a=$1&b=$2 [L]
+#RewriteRule ^([^/.]+)$ /inventar/index.php?a=$1 [L]
+
+#ErrorDocument 404 index.php?a=false
